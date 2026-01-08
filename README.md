@@ -31,8 +31,58 @@ This project consists of two main components:
 
 Follow these steps to run the project on your local machine.
 
-### 1. Clone the Repository
+### Clone the Repository
 Open your terminal and clone the project:
 ```bash
 git clone [https://github.com/brknfk/MedicalBillProject.git]
 cd MedicalBillApp
+```
+
+
+### 🐍 Backend Setup (Server)
+
+First, we need to get the server running.
+
+1. **Navigate to the backend folder:**
+   ```bash
+   cd backend
+2. **Create a virtual environment and install dependencies:**
+```bash
+# For Windows:
+python -m venv venv
+venv\Scripts\activate
+```
+# Install packages:
+```bash
+pip install -r requirements.txt
+Configure API Key:
+```
+1. **Create a file named .env inside the backend folder.**
+
+Paste your Google Gemini API key inside:
+
+
+```bash
+GOOGLE_API_KEY=Your_Google_Api_Key_Here
+```
+2. **Run the Server:**
+```bash
+uvicorn main:app --reload --host 0.0.0.0
+```
+The server is now running! 🟢
+
+📱 Mobile Setup (App)
+While the server is running, open a new terminal window for the mobile app.
+
+1. **Navigate to the mobile folder:**
+```bash
+cd mobile
+```
+2. **Install Flutter dependencies:**
+```bash
+flutter pub get
+```
+3. **Run the Application: (Ensure you have an emulator running or a physical device connected)**
+```bash
+flutter run
+```
